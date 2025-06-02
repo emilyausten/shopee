@@ -1,0 +1,138 @@
+Uri: https://cdn.utmify.com.br/scripts/utms/latest.js
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\scripts\utms\latest-7.js
+Content Type: text/javascript
+
+Uri: https://logospng.org/download/pix/logo-pix-512.png
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\download\pix\logo-pix-512-1.png
+Content Type: image/png
+
+Uri: https://sejaummotorista.site/entregador/finalizar/3.4.16
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\finalizar\3.4.16
+Content Type: 
+
+Uri: https://sejaummotorista.site/entregador/finalizar/736x/05/7b/27/057b274c134bcf92ac151758478949b3.jpg
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\finalizar\736x\05\7b\27\057b274c134bcf92ac151758478949b3.jpg
+Content Type: image/jpeg
+
+Uri: https://sejaummotorista.site/entregador/finalizar/ajax/libs/font-awesome/5.15.3/css/all.min.css
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\finalizar\ajax\libs\font-awesome\5.15.3\css\all.min.css
+Content Type: text/css
+
+Uri: https://sejaummotorista.site/entregador/finalizar/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;700&display=swap
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\finalizar\css2
+Content Type: 
+
+Uri: https://sejaummotorista.site/entregador/finalizar/kit/
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\finalizar\kit\index.htm
+Content Type: text/html
+
+Uri: https://sejaummotorista.site/entregador/finalizar/kit/img/colete2.png
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\finalizar\kit\img\colete2.png
+Content Type: image/png
+
+Uri: https://sejaummotorista.site/entregador/finalizar/kit/index.html
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\finalizar\kit\index.html
+Content Type: text/html
+
+ext/html
+
+Uri: https://sejaummotorista.site/entregador/inicio/css/all.min.css
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\css\all.min.css
+Content Type: text/css
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-brands-400.eot
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-brands-400.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-brands-400.ttf
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-brands-400.ttf
+Content Type: font/ttf
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-brands-400.woff
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-brands-400.woff
+Content Type: font/woff
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-brands-400.woff2
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-brands-400.woff2
+Content Type: font/woff2
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-regular-400.eot
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-regular-400.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-regular-400.ttf
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-regular-400.ttf
+Content Type: font/ttf
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-regular-400.woff
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-regular-400.woff
+Content Type: font/woff
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-regular-400.woff2
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-regular-400.woff2
+Content Type: font/woff2
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-solid-900.eot
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-solid-900.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-solid-900.ttf
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-solid-900.ttf
+Content Type: font/ttf
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-solid-900.woff
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-solid-900.woff
+Content Type: font/woff
+
+Uri: https://sejaummotorista.site/entregador/inicio/fonts/fa-solid-900.woff2
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\fonts\fa-solid-900.woff2
+Content Type: font/woff2
+
+Uri: https://sejaummotorista.site/entregador/inicio/images/057b274c134bcf92ac151758478949b3.jpg
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\images\057b274c134bcf92ac151758478949b3.jpg
+Content Type: image/jpeg
+
+Uri: https://sejaummotorista.site/entregador/inicio/images/br-11134258-7r98o-m21cpuqxu6ana5.webp
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\images\br-11134258-7r98o-m21cpuqxu6ana5.webp
+Content Type: image/webp
+
+Uri: https://sejaummotorista.site/entregador/inicio/images/br-11134258-7r98o-m21cqh315henad.webp
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\images\br-11134258-7r98o-m21cqh315henad.webp
+Content Type: image/webp
+
+Uri: https://sejaummotorista.site/entregador/inicio/images/br-11134258-7r98o-m21cqu20650kad.webp
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\images\br-11134258-7r98o-m21cqu20650kad.webp
+Content Type: image/webp
+
+Uri: https://sejaummotorista.site/entregador/inicio/images/fa-brands-400.svg
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\images\fa-brands-400.svg
+Content Type: image/svg+xml
+
+Uri: https://sejaummotorista.site/entregador/inicio/images/fa-regular-400.svg
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\images\fa-regular-400.svg
+Content Type: image/svg+xml
+
+Uri: https://sejaummotorista.site/entregador/inicio/images/fa-solid-900.svg
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\images\fa-solid-900.svg
+Content Type: image/svg+xml
+
+Uri: https://sejaummotorista.site/entregador/inicio/images/Sem-nome-Story-1.webp
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\images\Sem-nome-Story-1.webp
+Content Type: image/webp
+
+Uri: https://sejaummotorista.site/entregador/inicio/images/shopee-logo-png_seeklogo-378738.png
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\images\shopee-logo-png_seeklogo-378738.png
+Content Type: image/png
+
+Uri: https://sejaummotorista.site/entregador/inicio/index.html
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\index.html
+Content Type: text/html
+
+Uri: https://sejaummotorista.site/entregador/inicio/js/index.js
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\js\index.js
+Content Type: text/javascript
+
+Uri: https://sejaummotorista.site/entregador/inicio/js/latest.js
+File Name: C:\Downloaded Web Sites\sejaummotorista.site\entregador\inicio\js\latest.js
+Content Type: text/javascript
+

